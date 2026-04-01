@@ -441,6 +441,7 @@ function sa(id){
   for(var i=0;i<arts.length;i++){arts[i].classList.remove('active');}
   document.getElementById(id).classList.add('active');
   window.scrollTo({top:0,behavior:'instant'});
+  history.replaceState(null,null,'#'+id);
 }
 
 function ca(){
@@ -448,7 +449,16 @@ function ca(){
   for(var i=0;i<arts.length;i++){arts[i].classList.remove('active');}
   document.getElementById('landing').style.display='block';
   document.getElementById('articles').scrollIntoView({behavior:'smooth'});
+  history.replaceState(null,null,window.location.pathname);
 }
+
+// Deep link: open article directly from URL hash
+(function(){
+  var h=window.location.hash.replace('#','');
+  if(h && document.getElementById(h) && document.getElementById(h).classList.contains('article-full')){
+    sa(h);
+  }
+})();
 
 function showLegal(id){
   document.getElementById('landing').style.display='none';
