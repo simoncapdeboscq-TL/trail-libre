@@ -93,6 +93,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;opacity:.03;z-
 .article-card:hover{transform:translateY(-4px);box-shadow:0 8px 30px rgba(0,0,0,.08)}
 .ac-img{height:200px;background-size:cover;background-position:center;position:relative}
 .ac-tag{position:absolute;top:12px;left:12px;font-family:'DM Sans',sans-serif;font-size:.6rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;padding:4px 10px;background:var(--clay);color:var(--white);border-radius:3px}
+.ac-tag-featured{left:auto;right:12px;background:var(--sun);color:var(--forest)}
 .ac-body{padding:1.5rem}
 .ac-title{font-family:'Instrument Serif',Georgia,serif;font-size:1.25rem;font-weight:400;color:var(--forest);margin-bottom:.5rem;line-height:1.3}
 .ac-excerpt{font-size:.92rem;color:var(--stone);line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:1rem}
@@ -137,7 +138,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;opacity:.03;z-
 </head>
 <body>
 <div id="landing">
-<section class="hero"><div class="hero-content"><div class="hero-overline">Un sentier. Une promesse.</div><h1 class="hero-title">TRAIL<span>LIBRE</span></h1><div class="hero-rule"></div><p class="hero-subtitle">Courir libre. Sans dossard, sans chrono. Juste les sentiers, la nature, les autres.</p><!-- form replaced by Google Form --><div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;opacity:0;animation:fadeUp .5s ease-out .9s forwards"><a href="#manifeste" style="padding:.9rem 2rem;background:var(--clay);color:var(--white);border-radius:4px;font-family:'DM Sans',sans-serif;font-size:.82rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:background .2s">Lire le manifeste</a><a href="#articles" style="padding:.9rem 2rem;background:transparent;color:var(--cream);border:1px solid rgba(250,248,245,.25);border-radius:4px;font-family:'DM Sans',sans-serif;font-size:.82rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:border-color .2s">Découvrir les inspirations</a><a href="https://docs.google.com/forms/d/e/1FAIpQLSeJ5jt7pZo2uop1GqV4Y-r23vByVSRwk47E0Rdx30hvtKoPNQ/viewform" target="_blank" style="padding:.9rem 2rem;background:transparent;color:var(--sun);border:1px solid var(--sun);border-radius:4px;font-family:'DM Sans',sans-serif;font-size:.82rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:border-color .2s">Rejoindre</a></div><p class="hero-note">↓ Trois textes à lire avant de courir</p></div><a href="#manifeste" class="hero-scroll"><span>Découvrir</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg></a></section>
+<section class="hero"><div class="hero-content"><div class="hero-overline">Un sentier. Une promesse.</div><h1 class="hero-title">TRAIL<span>LIBRE</span></h1><div class="hero-rule"></div><p class="hero-subtitle">Courir libre. Sans dossard, sans chrono. Juste les sentiers, la nature, les autres.</p><div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;opacity:0;animation:fadeUp .5s ease-out .9s forwards"><a href="#manifeste" style="padding:.9rem 2rem;background:var(--clay);color:var(--white);border-radius:4px;font-family:'DM Sans',sans-serif;font-size:.82rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:background .2s">Lire le manifeste</a><a href="#articles" style="padding:.9rem 2rem;background:transparent;color:var(--cream);border:1px solid rgba(250,248,245,.25);border-radius:4px;font-family:'DM Sans',sans-serif;font-size:.82rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:border-color .2s">Découvrir les inspirations</a><a href="https://docs.google.com/forms/d/e/1FAIpQLSeJ5jt7pZo2uop1GqV4Y-r23vByVSRwk47E0Rdx30hvtKoPNQ/viewform" target="_blank" style="padding:.9rem 2rem;background:transparent;color:var(--sun);border:1px solid var(--sun);border-radius:4px;font-family:'DM Sans',sans-serif;font-size:.82rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:border-color .2s">Rejoindre</a></div><p class="hero-note">↓ Trois textes à lire avant de courir</p></div><a href="#manifeste" class="hero-scroll"><span>Découvrir</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg></a></section>
 
 <section class="manifeste" id="manifeste">
 <div style="position:relative;min-height:45vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;background:linear-gradient(180deg,rgba(26,46,26,.85),rgba(45,74,43,.75)),url('https://images.unsplash.com/photo-1551632811-561732d1e306?w=1600') center/cover">
@@ -196,15 +197,14 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;opacity:.03;z-
 </div>
 </section>
 
-<section class="articles" id="articles"><div class="articles-header"><div class="a-label">Inspirations</div><h2 class="a-title">Lire, penser, puis sortir courir</h2></div><div class="articles-grid"><div class="article-card" onclick="sa('art-finisher')"><div class="ac-img" style="background-image:url('https://images.unsplash.com/photo-1533240332313-0db49b459ad6?w=800&q=80')"><span class="ac-tag">Inspiration</span></div><div class="ac-body"><h3 class="ac-title">Finisher de quoi ?</h3><p class="ac-excerpt">Tu as couru sept heures. Tu as traversé trois villages, longé une côte que tu ne connaissais pas, bu un café dans un bar où tu n'étais jamais entré. Personne ne te donnera de médaille pour ça.</p><span class="ac-meta">Mars 2026 · 6 min de lecture</span></div></div><div class="article-card" onclick="sa('art1')"><div class="ac-img" style="background-image:url('https://images.unsplash.com/photo-1551632811-561732d1e306?w=800&q=80')"><span class="ac-tag">Inspiration</span></div><div class="ac-body"><h3 class="ac-title">La motivation sans la course</h3><p class="ac-excerpt">On connaît tous ce moment. La course est terminée, la médaille rangée, le post Instagram publié. Et puis… plus rien. Le calendrier est vide.</p><span class="ac-meta">Mars 2026 · 6 min de lecture</span></div></div><div class="article-card" onclick="sa('art2')"><div class="ac-img" style="background-image:url('https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800&q=80')"><span class="ac-tag">Inspiration</span></div><div class="ac-body"><h3 class="ac-title">Et si ta prochaine sortie n'existait pour personne d'autre que toi ?</h3><p class="ac-excerpt">Tu ouvres Strava. Tu regardes ton allure. Tu publies. Tu attends. Un kudos. Deux. Cinq. Mais le moment où l'odeur des fougères t'a stoppé net — il n'est nulle part dans les données.</p><span class="ac-meta">Mars 2026 · 7 min de lecture</span></div></div><div class="article-card" onclick="sa('art3')"><div class="ac-img" style="background-image:url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=80')"><span class="ac-tag">Inspiration</span></div><div class="ac-body"><h3 class="ac-title">La Barkley n'a pas de dossard. Et c'est la course la plus désirée au monde.</h3><p class="ac-excerpt">14 février 2026, Tennessee. Gary Cantrell allume une cigarette. Quarante coureurs s'enfoncent dans la forêt. Zéro finisher. Et pourtant : tout le monde en rêve.</p><span class="ac-meta">Mars 2026 · 7 min de lecture</span></div></div></div></section>
+<section class="articles" id="articles"><div class="articles-header"><div class="a-label">Inspirations</div><h2 class="a-title">Lire, penser, puis sortir courir</h2></div><div class="articles-grid"><div class="article-card" onclick="sa('art-finisher')"><div class="ac-img" style="background-image:url('https://images.unsplash.com/photo-1533240332313-0db49b459ad6?w=800&q=80')"><span class="ac-tag">Inspiration</span></div><div class="ac-body"><h3 class="ac-title">Finisher de quoi ?</h3><p class="ac-excerpt">Tu as couru sept heures. Tu as traversé trois villages, longé une côte que tu ne connaissais pas, bu un café dans un bar où tu n'étais jamais entré. Personne ne te donnera de médaille pour ça.</p><span class="ac-meta">Mars 2026 · 6 min de lecture</span></div></div><div class="article-card" onclick="sa('art1')"><div class="ac-img" style="background-image:url('https://images.unsplash.com/photo-1551632811-561732d1e306?w=800&q=80')"><span class="ac-tag">Inspiration</span></div><div class="ac-body"><h3 class="ac-title">La motivation sans la course</h3><p class="ac-excerpt">On connaît tous ce moment. La course est terminée, la médaille rangée, le post Instagram publié. Et puis… plus rien. Le calendrier est vide.</p><span class="ac-meta">Mars 2026 · 6 min de lecture</span></div></div><div class="article-card" onclick="sa('art2')"><div class="ac-img" style="background-image:url('https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800&q=80')"><span class="ac-tag">Inspiration</span></div><div class="ac-body"><h3 class="ac-title">Et si ta prochaine sortie n'existait pour personne d'autre que toi ?</h3><p class="ac-excerpt">Tu ouvres Strava. Tu regardes ton allure. Tu publies. Tu attends. Un kudos. Deux. Cinq. Mais le moment où l'odeur des fougères t'a stoppé net — il n'est nulle part dans les données.</p><span class="ac-meta">Mars 2026 · 7 min de lecture</span></div></div><div class="article-card" onclick="sa('art3')"><div class="ac-img" style="background-image:url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=80')"><span class="ac-tag">Inspiration</span></div><div class="ac-body"><h3 class="ac-title">La Barkley n'a pas de dossard. Et c'est la course la plus désirée au monde.</h3><p class="ac-excerpt">14 février 2026, Tennessee. Gary Cantrell allume une cigarette. Quarante coureurs s'enfoncent dans la forêt. Zéro finisher. Et pourtant : tout le monde en rêve.</p><span class="ac-meta">Mars 2026 · 7 min de lecture</span></div></div><div class="article-card" onclick="sa('art-bretagne')"><div class="ac-img" style="background-image:url('https://images.unsplash.com/photo-1731082417879-710ff0c868ae?w=800&q=80')"><span class="ac-tag">Inspiration</span><span class="ac-tag ac-tag-featured">À la une</span></div><div class="ac-body"><h3 class="ac-title">Tu connais Bali. Tu n'as jamais marché sur le GR34.</h3><p class="ac-excerpt">Tu connais le nom des plages de Lombok. Tu sais où boire le meilleur café à Lisbonne. Tu peux citer trois rooftops à Mexico. Mais tu n'as jamais traversé la presqu'île de Crozon à pied.</p><span class="ac-meta">Avril 2026 · 7 min de lecture</span></div></div></div></section>
 
 <section class="newsletter"><div class="newsletter-content"><div class="nl-label">Rester dans la boucle</div><h2>L'histoire ne fait que commencer.</h2><p>Pas de spam. Pas d'algorithme. Juste un email quand un nouveau texte, une nouvelle trace ou une idée mérite d'être partagée.</p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeJ5jt7pZo2uop1GqV4Y-r23vByVSRwk47E0Rdx30hvtKoPNQ/viewform" target="_blank" style="display:inline-block;padding:1rem 2.5rem;background:var(--clay);color:var(--white);border-radius:4px;font-family:'DM Sans',sans-serif;font-size:.85rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:background .2s">S'inscrire</a><p class="nl-note">Désabonnement en une demande. On respecte ta boîte comme on respecte les sentiers.</p></div></section>
 
 <footer class="footer"><div class="footer-logo">TRAIL LIBRE</div><p class="footer-baseline">Partir. Profiter. Respirer.</p><p class="footer-social"><a href="https://instagram.com/traillibre" target="_blank">@traillibre</a></p><p style="font-family:'DM Sans',sans-serif;font-size:.65rem;margin-bottom:1rem"><a href="#" onclick="showLegal('mentions');return false" style="color:rgba(250,248,245,.35);text-decoration:none;margin-right:1.5rem">Mentions légales</a><a href="#" onclick="showLegal('confidentialite');return false" style="color:rgba(250,248,245,.35);text-decoration:none">Politique de confidentialité</a></p><p class="footer-copy">© 2026 Trail Libre · Fait avec authenticité en Bretagne</p></footer>
 </div>
 
-<!-- ARTICLE FINISHER -->
-<div class="article-full" id="art-finisher"><div class="af-header"><span class="af-back" onclick="ca()">← Retour</span><div class="af-label">Inspiration · 8 / 8</div><h1 class="af-title">Finisher de quoi ?</h1><p class="af-sub">Ce qui reste quand il n'y a pas d'arche, pas de chrono et pas de médaille</p><p class="af-meta">Mars 2026 · 6 minutes de lecture</p></div><div class="af-body">
+<div class="article-full" id="art-finisher"><div class="af-header"><span class="af-back" onclick="ca()">← Retour</span><div class="af-label">Inspiration · 1 / 5</div><h1 class="af-title">Finisher de quoi ?</h1><p class="af-sub">Ce qui reste quand il n'y a pas d'arche, pas de chrono et pas de médaille</p><p class="af-meta">Mars 2026 · 6 minutes de lecture</p></div><div class="af-body">
 
 <p>Tu as couru sept heures. Tu as traversé trois villages, longé une côte que tu ne connaissais pas, bu un café dans un bar où tu n'étais jamais entré. Tu as marché dans la boue pendant un kilomètre, ri tout seul en glissant, juré sur un pierrier, souri sur une crête. Tu es rentré fatigué et heureux.</p>
 
@@ -261,8 +261,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;opacity:.03;z-
 <div class="af-closing"><div class="tagline">NO DOSSARD. NO CUT-OFF.</div><p class="credo">Juste toi, le sentier, et ta propre définition de la réussite.</p></div>
 </div></div>
 
-<!-- ARTICLE 1: MOTIVATION -->
-<div class="article-full" id="art1"><div class="af-header"><span class="af-back" onclick="ca()">← Retour</span><div class="af-label">Inspiration · 1 / 8</div><h1 class="af-title">La motivation sans la course</h1><p class="af-sub">7 façons de ne jamais décrocher — sans dossard, sans chrono, sans inscription</p><p class="af-meta">Mars 2026 · 6 minutes de lecture</p></div><div class="af-body">
+<div class="article-full" id="art1"><div class="af-header"><span class="af-back" onclick="ca()">← Retour</span><div class="af-label">Inspiration · 2 / 5</div><h1 class="af-title">La motivation sans la course</h1><p class="af-sub">7 façons de ne jamais décrocher — sans dossard, sans chrono, sans inscription</p><p class="af-meta">Mars 2026 · 6 minutes de lecture</p></div><div class="af-body">
 <p>On connaît tous ce moment. La course est terminée, la médaille rangée, le post Instagram publié. Et puis… plus rien. Le calendrier est vide. Le réveil sonne mais les jambes ne savent plus pourquoi. Pendant des semaines, l'entraînement avait un cap. Maintenant, il a un canapé.</p>
 <p>Ce vide-là, on l'appelle le <em>post-race blues</em>. Il touche des milliers de coureurs chaque année. Et si le problème n'était pas le manque de course — mais le fait d'avoir confié toute sa motivation à un dossard ?</p>
 <p>Le trail libre propose autre chose. Une structure différente. Celle que tu construis toi-même, à partir de ce qui te fait vraiment sortir le matin.</p>
@@ -293,8 +292,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;opacity:.03;z-
 <div class="af-closing"><div class="tagline">NO DOSSARD. NO CUT-OFF.</div><p class="credo">Juste toi, le sentier, et ta propre définition de la réussite.</p></div>
 </div></div>
 
-<!-- ARTICLE 2: STRAVA -->
-<div class="article-full" id="art2"><div class="af-header"><span class="af-back" onclick="ca()">← Retour</span><div class="af-label">Inspiration · 3 / 8</div><h1 class="af-title">Et si ta prochaine sortie n'existait pour personne d'autre que toi ?</h1><p class="af-sub">Strava, kudos et dopamine : ce que le running connecté fait à ton plaisir de courir</p><p class="af-meta">Mars 2026 · 7 minutes de lecture</p></div><div class="af-body">
+<div class="article-full" id="art2"><div class="af-header"><span class="af-back" onclick="ca()">← Retour</span><div class="af-label">Inspiration · 3 / 5</div><h1 class="af-title">Et si ta prochaine sortie n'existait pour personne d'autre que toi ?</h1><p class="af-sub">Strava, kudos et dopamine : ce que le running connecté fait à ton plaisir de courir</p><p class="af-meta">Mars 2026 · 7 minutes de lecture</p></div><div class="af-body">
 <p>Tu rentres d'une sortie. Dix kilomètres sur les chemins, la lumière du matin dans les arbres, un passage à gué que tu ne connaissais pas. Tu poses le téléphone. Tu ouvres Strava. Tu regardes ton allure. Tu compares avec la semaine dernière. Tu publies. Tu attends. Un kudos. Deux. Cinq. Bien.</p>
 <p>Sauf que le moment où tu étais dans l'eau jusqu'aux chevilles, celui où l'odeur des fougères t'a stoppé net, celui où tu as ri tout seul parce que tu t'es perdu — ce moment-là, il n'est nulle part dans les données. Il vit dans ta tête, et uniquement là.</p>
 <p>La question est simple : est-ce que tu cours encore pour ce moment-là ? Ou est-ce que tu cours pour le graphique ?</p>
@@ -319,8 +317,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;opacity:.03;z-
 <div class="af-closing"><div class="tagline">NO DOSSARD. NO ALGORITHM.</div><p class="credo">Juste toi, le sentier, et le silence qui dit tout.</p></div>
 </div></div>
 
-<!-- ARTICLE 3: BOULANGER -->
-<div class="article-full" id="art3"><div class="af-header"><span class="af-back" onclick="ca()">← Retour</span><div class="af-label">Inspiration · 2 / 8</div><h1 class="af-title">La Barkley n'a pas de dossard. Et c'est la course la plus désirée au monde.</h1><p class="af-sub">Ce que la course la plus folle du trail dit de notre rapport à l'aventure</p><p class="af-meta">Mars 2026 · 7 minutes de lecture</p></div><div class="af-body">
+<div class="article-full" id="art3"><div class="af-header"><span class="af-back" onclick="ca()">← Retour</span><div class="af-label">Inspiration · 4 / 5</div><h1 class="af-title">La Barkley n'a pas de dossard. Et c'est la course la plus désirée au monde.</h1><p class="af-sub">Ce que la course la plus folle du trail dit de notre rapport à l'aventure</p><p class="af-meta">Mars 2026 · 7 minutes de lecture</p></div><div class="af-body">
 <p>14 février 2026, 6 heures du matin, Tennessee. Gary Cantrell allume une cigarette. Quarante coureurs s'enfoncent dans la forêt de Frozen Head. Avec une carte, une boussole, et des pages de livres à arracher en chemin pour prouver leur passage.</p>
 <p>Trois jours plus tard, résultat : zéro finisher. Pour la deuxième année consécutive. Sur 40 partants, seul le Français Sébastien Raichon a réussi la Fun Run — trois boucles en 38 heures. Mathieu Blanchard, dont la présence n'a été confirmée qu'au passage de la deuxième boucle, a abandonné sur la troisième à cause du froid.</p>
 <p>Et pourtant : la Barkley reste la course la plus désirée du monde. On est invité — ou pas. Le seul cadre : une forêt, une énigme, et 60 heures pour s'en sortir.</p>
@@ -347,13 +344,77 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;opacity:.03;z-
 <div class="af-closing"><div class="tagline">NO DOSSARD. NO CUT-OFF.</div><p class="credo">Juste toi, le sentier, et ta propre définition de la réussite.</p></div>
 </div></div>
 
-<!-- MENTIONS LÉGALES -->
+<div class="article-full" id="art-bretagne"><div class="af-header"><span class="af-back" onclick="ca()">← Retour</span><div class="af-label">Inspiration · 5 / 5</div><h1 class="af-title">Tu connais Bali. Tu n'as jamais marché sur le GR34.</h1><p class="af-sub">Pourquoi la Bretagne mérite ton week-end avant ton prochain vol long-courrier</p><p class="af-meta">Avril 2026 · 7 minutes de lecture</p></div><div class="af-body">
+
+<p>Tu connais le nom des plages de Lombok. Tu sais où boire le meilleur café à Lisbonne. Tu peux citer trois rooftops à Mexico. Mais tu n'as jamais traversé la presqu'île de Crozon à pied. Tu n'as jamais dormi à Camaret. Tu n'as jamais vu le soleil se lever sur la Pointe du Raz.</p>
+
+<p>On a tous fait ça. Économisé pour partir loin, et ignoré ce qui était à trois heures de chez nous. Comme si la beauté avait besoin d'un visa pour exister.</p>
+
+<p>Le trail libre propose une autre carte. Celle où ton territoire devient une destination. Où courir près de chez toi devient une forme de voyage à part entière.</p>
+
+<h3>Le paradoxe du voyageur immobile</h3>
+
+<p>On peut citer un quartier de Berlin et ne pas savoir où passe le GR de chez soi. On a vu les rizières de Bali sur Instagram, mais pas les pointes granitiques de la presqu'île de Crozon. La majorité des Français connaissent mieux deux ou trois capitales européennes que leur propre région.</p>
+
+<p>Le voyage lointain est devenu un réflexe. Le local, lui, attend.</p>
+
+<p>Et pendant ce temps, des sentiers traversent ta région. Des falaises tombent dans la mer à deux heures de Paris. Des hameaux se réveillent dans la brume sans personne pour les regarder. Tu paies pour aller voir des paysages que d'autres viennent voir chez toi.</p>
+
+<h3>La Bretagne comme terrain de course libre</h3>
+
+<p>La Bretagne a quelque chose que peu de régions offrent&nbsp;: un seul sentier qui fait le tour de toute une péninsule. Le GR34, le sentier des douaniers, suit la côte de Saint-Nazaire au Mont-Saint-Michel. Plus de 2&nbsp;000 kilomètres de chemin balisé, gratuit, ouvert toute l'année. Le plus grand sentier littoral d'Europe.</p>
+
+<p>Et chaque tronçon est un voyage en soi. Le Tour de la presqu'île de Crozon&nbsp;: 155 kilomètres en sept étapes. Tu pars de Camaret, tu passes par la Pointe de Pen-Hir, tu descends vers le Cap de la Chèvre, tu finis à Morgat sur une plage où l'on vend encore des kouign-amann à la pièce. En une semaine, tu as traversé un pays. Et tu n'as pris ni avion, ni train de nuit.</p>
+
+<p>Ce que la Bretagne offre, c'est une densité. Densité de sentiers, densité de paysages, densité de villages où s'arrêter. Tu peux courir une matinée et passer du granit rose aux landes, des pins maritimes aux chapelles de bord de mer. Cinq décors en quatre heures. Aucune montagne n'offre cette diversité-là à si courte distance.</p>
+
+<h3>Courir comme on voyage — version 50 km de chez soi</h3>
+
+<p>Le slow travel a explosé ces dernières années. Le voyage lent, en train, en vélo, à pied. La micro-aventure, terme popularisé par Alastair Humphreys, en est la version courte&nbsp;: partir un vendredi soir, dormir dehors ou en gîte, rentrer le dimanche. Pas besoin de poser de vacances. Pas besoin d'un budget de mariage.</p>
+
+<p>Le trail libre s'inscrit exactement dans ce mouvement. Tu prends un train régional. Tu descends à Quimper, à Lannion, à Morlaix. Tu cours une étape de GR34. Tu dors dans un gîte. Tu repars le lendemain. Tu rentres dimanche soir avec quelque chose que ton dernier vol Ryanair ne t'a pas donné&nbsp;: la sensation d'avoir traversé un territoire, lentement, à la vitesse de tes jambes.</p>
+
+<p>La tendance de fond est claire. En 2026, le coureur français change. Il ne cherche plus uniquement la performance. Il cherche l'expérience, le sens, la rencontre. Il pratique de manière hybride, sociale, intégrée à son quotidien. Le trail devient un mode de découverte, pas seulement un sport.</p>
+
+<h3>Ce que la Bretagne t'apprend qu'aucun guide ne te dira</h3>
+
+<p>La Bretagne n'est pas un décor. C'est un endroit où l'on vit, où l'on travaille, où l'on parle encore breton dans certaines maisons.</p>
+
+<p>Quand tu cours le GR34, tu croises des gens. Le gardien du phare qui te dit où passer à marée basse. La crêpière de Camaret qui te raconte l'histoire des bateaux échoués. Le pêcheur qui te montre la cale où il décharge le matin. Ces rencontres ne sont pas dans les topos. Elles arrivent parce que tu es passé là, à pied, avec de la boue sur les chaussures et un peu de temps devant toi.</p>
+
+<p>C'est exactement ce que les voyageurs vont chercher à l'autre bout du monde. La conversation imprévue. Le détour qui change la journée. Le local qui te tend un café. Sauf qu'ici, tu n'as pas eu besoin de prendre l'avion pour le vivre.</p>
+
+<h3>Où courir libre, concrètement</h3>
+
+<p>La presqu'île de Crozon est un point de départ idéal. Sept étapes, du granit, des falaises, des plages. Tu pars de Camaret, tu finis à Morgat. Tu peux faire une étape, deux, ou les sept. Tu peux dormir en gîte, en hôtel, en camping. Tu peux y aller seul ou en groupe.</p>
+
+<p>Plus au nord, la côte de granit rose entre Perros-Guirec et Trébeurden propose une vingtaine de kilomètres parmi les plus photographiés de France. Plus à l'est, la baie de Morlaix offre des étapes plus douces, idéales pour commencer. Plus au sud, la côte sauvage du Morbihan, autour de Quiberon et Belle-Île, alterne pins maritimes et plages cachées.</p>
+
+<p>Et au-delà du GR34, des centaines de kilomètres de sentiers intérieurs&nbsp;: les Monts d'Arrée, la forêt de Brocéliande, les crêtes du Trégor. La Bretagne intérieure est moins photographiée que la côte. C'est précisément ce qui en fait un territoire de trail libre — peu de monde, beaucoup de chemins, un balisage solide.</p>
+
+<h3>Le voyage commence à la gare la plus proche</h3>
+
+<p>Le mot voyage évoque l'avion, la valise, le décalage horaire. Le trail libre élargit cette définition. Voyager, c'est se déplacer dans un espace qu'on ne connaît pas. C'est dormir ailleurs que chez soi. C'est manger ce qu'on ne mange pas d'habitude. C'est rentrer en ayant changé un peu, même imperceptiblement.</p>
+
+<p>Tout ça, un week-end de trail le permet. Vendredi soir, tu es dans le TER. Samedi matin, tu cours sur le GR. Samedi soir, tu dors dans un gîte que tu ne connaissais pas. Dimanche, tu repars. Et lundi au bureau, tu as la même tête fatiguée et heureuse que les gens qui rentrent de Bali.</p>
+
+<p>Sauf que tu as découvert ton pays. Et que tu as appris quelque chose de simple&nbsp;: ce n'est pas la distance qui fait le voyage. C'est l'attention.</p>
+
+<p>Le monde est vaste. La tentation de partir loin est légitime. Mais avant de chercher l'aventure à dix mille kilomètres, demande-toi si tu connais le sentier qui passe à dix kilomètres de chez toi.</p>
+
+<p>La Bretagne attend ceux qui n'ont jamais marché sur le GR34. Les Pyrénées attendent ceux qui n'ont jamais dormi en refuge. Les Cévennes attendent ceux qui n'ont jamais traversé un causse à l'aube.</p>
+
+<p>Le voyage commence là où tu acceptes de regarder. Et le plus souvent, le regard suffit pour transformer l'ordinaire en destination.</p>
+
+<div class="af-closing"><div class="tagline">NO DOSSARD. NO BOARDING PASS.</div><p class="credo">Juste toi, le sentier, et ta propre définition du voyage.</p></div>
+</div></div>
+
 <div class="article-full" id="mentions"><div class="af-header" style="padding:6rem 2rem 3rem"><span class="af-back" onclick="closeLegal()">← Retour</span><h1 class="af-title" style="font-size:2rem">Mentions légales</h1></div><div class="af-body">
 
 <h3>Éditeur du site</h3>
 <p>Le site trail-libre.com est édité par SC Consulting, micro-entreprise enregistrée en France.<br>
 Responsable de la publication : Simon Capdeboscq<br>
-Email : <span class="email-placeholder" data-cfemail="40232f2e3421233400343221292c6d2c292232256e232f2d">[email&#160;protected]</a></p>
+Email : <span class="email-placeholder" data-cfemail="40232f2e3421233400343221292c6d2c292232256e232f2d">[email&#160;protected]</span></p>
 
 <h3>Hébergement</h3>
 <p>Ce site est hébergé par [nom de l'hébergeur à compléter, adresse, téléphone].</p>
@@ -400,11 +461,10 @@ Email : <span class="email-placeholder" data-cfemail="40232f2e342123340034322129
 <p style="color:var(--stone-light);font-style:italic;margin-top:2.5rem">Dernière mise à jour : mars 2026</p>
 </div></div>
 
-<!-- POLITIQUE DE CONFIDENTIALITÉ -->
 <div class="article-full" id="confidentialite"><div class="af-header" style="padding:6rem 2rem 3rem"><span class="af-back" onclick="closeLegal()">← Retour</span><h1 class="af-title" style="font-size:2rem">Politique de confidentialité</h1></div><div class="af-body">
 <h3>Responsable du traitement</h3>
 <p>SC Consulting — Simon Capdeboscq<br>
-Email : <span class="email-placeholder" data-cfemail="1c7f7372687d7f685c686e7d75703170757e6e79327f7371">[email&#160;protected]</a></p>
+Email : <span class="email-placeholder" data-cfemail="1c7f7372687d7f685c686e7d75703170757e6e79327f7371">[email&#160;protected]</span></p>
 <h3>Données collectées</h3>
 <p>Le site trail-libre.com collecte uniquement l'adresse email des personnes qui s'inscrivent volontairement via le formulaire de newsletter. Aucune autre donnée personnelle n'est collectée.</p>
 <h3>Finalité</h3>
@@ -412,7 +472,7 @@ Email : <span class="email-placeholder" data-cfemail="1c7f7372687d7f685c686e7d75
 <h3>Durée de conservation</h3>
 <p>Les adresses email sont conservées tant que la personne ne demande pas leur suppression.</p>
 <h3>Vos droits</h3>
-<p>Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès, de rectification, de suppression et de portabilité de vos données personnelles. Pour exercer ces droits, envoyez un email à <span class="email-placeholder" data-cfemail="f4979b9a80959780b48086959d98d9989d968691da979b99">[email&#160;protected]</a>. Votre demande sera traitée dans un délai de 30 jours.</p>
+<p>Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès, de rectification, de suppression et de portabilité de vos données personnelles. Pour exercer ces droits, envoyez un email à <span class="email-placeholder" data-cfemail="f4979b9a80959780b48086959d98d9989d968691da979b99">[email&#160;protected]</span>. Votre demande sera traitée dans un délai de 30 jours.</p>
 <h3>Cookies</h3>
 <p>Ce site n'utilise aucun cookie de suivi, aucun cookie publicitaire et aucun outil d'analyse tiers. Les données du formulaire sont stockées localement dans votre navigateur (localStorage) en attendant la mise en place d'un outil de newsletter dédié.</p>
 <p><em>Dernière mise à jour : mars 2026</em></p>
